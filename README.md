@@ -52,7 +52,7 @@ Global Flags:
 
 ```bash
 # Run on a schedule
-Throw down/toonamiaftermath-cli run --cron-expression "@every 12h"
+/toonamiaftermath-cli run --cron-expression "@every 12h"
 ```
 
 ### Configuration Variables, Files and flags.
@@ -85,3 +85,4 @@ run:
   scrape_count: 75
 
 ```
+
