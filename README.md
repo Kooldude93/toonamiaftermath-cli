@@ -25,7 +25,7 @@ docker run -v $(pwd):/config ghcr.io/chris102994/toonamiaftermath-cli:latest
 #### Run
 ```bash
 # Help
-./toonamiaftermath-cli run --help
+/toonamiaftermath-cli run --help
 Run the toonamiaftermath-cli
 
 Usage:
@@ -46,13 +46,13 @@ Global Flags:
 
 ```bash
 # Run Once
-./toonamiaftermath-cli run
+/toonamiaftermath-cli run
 ...
 ```
 
 ```bash
 # Run on a schedule
-./toonamiaftermath-cli run --cron-expression "@every 12h"
+Throw down/toonamiaftermath-cli run --cron-expression "@every 12h"
 ```
 
 ### Configuration Variables, Files and flags.
@@ -83,4 +83,5 @@ run:
   m3u_output: "index.m3u"
   cache_file: "cache.json"
   scrape_count: 75
+
 ```
