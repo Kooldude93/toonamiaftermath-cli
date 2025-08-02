@@ -29,13 +29,11 @@ RUN --mount=type=cache,target=/root/.local/share/golang \
       -X 'main.Version=${VERSION:-N/A}'" \
     main.go
 
-
-
 FROM scratch
 COPY --from=builder /toonamiaftermath-cli .
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 USER 10000
 
-ENV CACHE_FILE=/config/cache.json
+WORKDIR /config
 
-ENTRYPOINT ["./toonamiaftermath-cli", "run", "--config", "/config/config.yaml"]
+ENTRYPOINT ["/toonamiaftermath-cli", "run", "--config", "/config/config.yaml"]
